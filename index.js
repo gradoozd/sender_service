@@ -4,6 +4,7 @@ const app = express()
 app.set('port', 3000)
 
 app.post('/', (req, res, next) => {
+    console.log('Received a request!')
     res.status(200)
     res.end()
 })
