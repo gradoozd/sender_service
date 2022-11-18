@@ -8,15 +8,18 @@ app.set('port', 3000)
 app.use(bodyParser.urlencoded( { extended: true }))
 app.use(bodyParser.xml({
     xmlParseOptions: {
-      explicitArray: false // Only put nodes in array if >1
+      explicitArray: false
     },
 }));
 
-app.post('/', (req, res, next) => {
+app.post('/decision', (req, res, next) => {
     console.log('Received a request!', req.body)
-    res.status(200)
-    res.end()
+    res.status(200).end()
+    // setTimeout({
+    //     fetch()
+    // })
 })
+
 
 app.listen(app.get('port'), () => {
     console.log(`You are online using at ${app.get('port')}`)
