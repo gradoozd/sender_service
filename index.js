@@ -13,7 +13,7 @@ app.use(bodyParser.xml({
 }));
 
 app.post('/decision', (req, res, next) => {
-    console.log('Received a request!', req.body)
+    console.log('Received a request!', req.body.contractConfirmation.header)
     res.status(200).json({theme: null, version: 1.0})
     // setTimeout({
     //     fetch()
